@@ -9,7 +9,7 @@ import Random from "./Components/Random";
 
 
 
- const API_GIPHY = 'aUhPqNQX1V9W5wSNJ9J0FOaQdvwgHH7O';
+ const API = 'aUhPqNQX1V9W5wSNJ9J0FOaQdvwgHH7O';
 
 class App extends Component {
     constructor(props){
@@ -40,7 +40,7 @@ class App extends Component {
     }
 
     getUrl(searchText, callback) {
-        const url = `http://api.giphy.com/v1/gifs/search?q=${searchText}&api_key=${API_GIPHY}`
+        const url = `http://api.giphy.com/v1/gifs/search?q=${searchText}&api_key=${API}`
         fetch(url)
         .then(response => response.json())
         .catch(error => console.error('Error:', error))

@@ -9,8 +9,8 @@ const LOADER = `https://media0.giphy.com/media/l0HlTy9x8FZo0XO1i/200w.webp`;
 class GifCard extends Component {
 
     handleLoader() {
-        const loaderFlag = this.props.loader;
-        const setLoader = loaderFlag ? LOADER : this.props.data.image;
+        const flag = this.props.loader;
+        const setLoader = flag ? LOADER : this.props.data.image;
         return setLoader
     }
 

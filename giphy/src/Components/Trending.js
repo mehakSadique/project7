@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const API_GIPHY = 'aUhPqNQX1V9W5wSNJ9J0FOaQdvwgHH7O';
+const API = 'aUhPqNQX1V9W5wSNJ9J0FOaQdvwgHH7O';
 class Trending extends Component {
     constructor(props) {
         super(props)
@@ -10,7 +10,7 @@ class Trending extends Component {
     }
 
     componentDidMount() {
-        fetch(`http://api.giphy.com/v1/gifs/trending?&api_key=${API_GIPHY}&limit=4`)
+        fetch(`http://api.giphy.com/v1/gifs/trending?&api_key=${API}&limit=10`)
             .then(res => res.json())
             .catch(error => console.error('Error:', error))
             .then((result) => {
