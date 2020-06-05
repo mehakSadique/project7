@@ -4,9 +4,8 @@ import axios from "axios";
 import SearchField from "./Components/SearchField";
 import GifCard from "./Components/GifCard";
 import Trending from "./Components/Trending";
-
 import Random from "./Components/Random";
-
+import "./App.css";
 
 
  const API = 'aUhPqNQX1V9W5wSNJ9J0FOaQdvwgHH7O';
@@ -42,6 +41,7 @@ class App extends Component {
     getUrl(searchText, callback) {
         const url = `http://api.giphy.com/v1/gifs/search?q=${searchText}&api_key=${API}&limit=10`
         fetch(url)
+        
         .then(response => response.json())
         .catch(error => console.error('Error:', error))
         .then(myJson => callback(myJson))

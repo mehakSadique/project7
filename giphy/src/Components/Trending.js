@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import  './App.css';
 
 const API = 'aUhPqNQX1V9W5wSNJ9J0FOaQdvwgHH7O';
 class Trending extends Component {
