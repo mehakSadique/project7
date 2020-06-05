@@ -24,7 +24,7 @@ class Trending extends Component {
     render() {
         const listItems = this.state.gifs.data.map((item) =>
             <a href={item.url} target="new" key={item.id}>
-                <img src={item.images.original.url} />
+                <img src={item.images.original.url} width="300" height="300"/>
             </a>
         );
         return (

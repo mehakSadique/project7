@@ -53,6 +53,7 @@ class App extends Component {
                 <h1 className="inscApp">The GIF Search </h1>
                 <SearchField
                     onSearch={this.searchGif.bind(this)}
+                   
                 />
                 <GifCard
                     loader={this.state.loader}
