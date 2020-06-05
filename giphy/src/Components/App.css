@@ -1,15 +1,23 @@
 .App {
   text-align: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #4061a3;
+  
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  background-color: #4061a3;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+    justify-content: center;
+    text-align: center;
+    background-color: #4061a3;
   }
 }
 
@@ -22,6 +30,13 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  text-align: center;
+  background-color: #4061a3;
+}
+.container{
+  justify-content: center;
+  text-align: center;
+  background-color: #4061a3;
 }
 
 .App-link {
