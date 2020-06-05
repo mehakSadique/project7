@@ -30,7 +30,7 @@ class Random extends Component {
                  <input type="text"
                      onChange ={this.handleChange.bind(this)}
                      onKeyUp = {this.handleKeyUp.bind(this)}
-                     placeholder="Search GIF"
+                     placeholder="Random GIF"
                      value={this.state.value}
                   />
                  

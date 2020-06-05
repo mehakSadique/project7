@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class SearchField extends Component {
     constructor(props) {
         super(props);
-        this.state = {value: ''};
+        this.state = {image: ''};
     }
 
     handleChange(event) {
@@ -29,7 +29,7 @@ class SearchField extends Component {
                      onChange ={this.handleChange.bind(this)}
                      onKeyUp = {this.handleKeyUp.bind(this)}
                      placeholder="Search GIF"
-                     value={this.state.value}
+                     image={this.state.image}
                   />
             </div>
         );
