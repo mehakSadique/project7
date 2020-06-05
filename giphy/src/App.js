@@ -63,6 +63,11 @@ class App extends Component {
                 <Random
                 onSearch={this.search.bind(this)}
                 This is Random/>
+                 <GifCard
+                    loader={this.state.loader}
+                    data={this.state.gif}
+                />
+               
                
             </div>
         );
