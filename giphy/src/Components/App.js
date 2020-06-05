@@ -40,7 +40,7 @@ class App extends Component {
     }
 
     getUrl(searchText, callback) {
-        const url = `http://api.giphy.com/v1/gifs/search?q=${searchText}&api_key=${API}`
+        const url = `http://api.giphy.com/v1/gifs/search?q=${searchText}&api_key=${API}&limit=10`
         fetch(url)
         .then(response => response.json())
         .catch(error => console.error('Error:', error))

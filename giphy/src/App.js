@@ -21,7 +21,7 @@ class App extends Component {
         };
     }
 
-    searchGif(searchText) {
+    search(searchText) {
         this.setState({
             loader: true
         });
@@ -29,7 +29,7 @@ class App extends Component {
             const getDetails = {
                 image : gif.data.fixed_height_downsampled_url,
                 title :  gif.data.title,
-                gifUrl : gif.data.url
+                gifURL : gif.data.url
             }
             this.setState({
                 loader : false,
@@ -40,7 +40,7 @@ class App extends Component {
     }
 
     getUrl(searchText, callback) {
-        const url = `http://api.giphy.com/v1/gifs/random?&tag=${searchText}&api_key=${API_GIPHY}`
+        const url = `http://api.giphy.com/v1/gifs/random?&tag=${searchText}&api_key=${API_GIPHY}&limit=10`
         fetch(url)
         .then(response => response.json())
         .catch(error => console.error('Error:', error))
@@ -52,7 +52,7 @@ class App extends Component {
             <div className="container">
                 <h1 className="inscApp">The GIF Search </h1>
                 <SearchField
-                    onSearch={this.searchGif.bind(this)}
+                    onSearch={this.search.bind(this)}
                 />
                 <GifCard
                     loader={this.state.loader}
@@ -61,7 +61,7 @@ class App extends Component {
                
                 <Trending />
                 <Random
-                onSearch={this.searchGif.bind(this)}
+                onSearch={this.search.bind(this)}
                 This is Random/>
                
             </div>
