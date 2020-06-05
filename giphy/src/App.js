@@ -8,8 +8,7 @@ import Trending from "./Components/Trending";
 import Random from "./Components/Random";
 
 
-
- const API_GIPHY = 'aUhPqNQX1V9W5wSNJ9J0FOaQdvwgHH7O';
+const API = process.env.REACT_APP_API_KEY;
 
 class App extends Component {
     constructor(props){
@@ -40,7 +39,7 @@ class App extends Component {
     }
 
     getUrl(searchText, callback) {
-        const url = `http://api.giphy.com/v1/gifs/random?&tag=${searchText}&api_key=${API_GIPHY}&limit=10`
+        const url = `http://api.giphy.com/v1/gifs/random?&tag=${searchText}&api_key=${API}&limit=10`
         fetch(url)
         .then(response => response.json())
         .catch(error => console.error('Error:', error))

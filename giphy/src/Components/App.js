@@ -8,7 +8,7 @@ import Random from "./Components/Random";
 import "./App.css";
 
 
- const API = 'aUhPqNQX1V9W5wSNJ9J0FOaQdvwgHH7O';
+ const API = process.env.REACT_APP_API_KEY;
 
 class App extends Component {
     constructor(props){
